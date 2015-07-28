@@ -19,7 +19,8 @@ RUN apt-get update && \
     apt-get install -y build-essential \
         wget \
         unzip \
-        tmux
+        tmux \
+        python python-pip
 
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
