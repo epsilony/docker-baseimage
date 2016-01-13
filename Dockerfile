@@ -20,7 +20,9 @@ RUN apt-get update && \
         wget \
         unzip \
         tmux \
-        python python-pip
+        python python-pip \
+        git \
+        netcat
 
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
