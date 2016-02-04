@@ -1,6 +1,6 @@
 # A docker image according to the poor network environment of China PR
 
-FROM phusion/baseimage
+FROM armv7/armhf-baseimage
 
 MAINTAINER Man YUAN
 
@@ -16,6 +16,7 @@ RUN echo Asia/Shanghai | \
 
 # some tools
 RUN apt-get update && \
+    apt-get upgrade -y -o Dpkg::Options::="--force-confold" && \
     apt-get install -y build-essential \
         wget \
         unzip \
