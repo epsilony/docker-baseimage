@@ -24,5 +24,6 @@ RUN apt-get update && \
         git \
         netcat
 
+RUN pip install watchdog jinja2
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
