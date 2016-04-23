@@ -18,12 +18,12 @@ RUN echo Asia/Shanghai | \
 RUN apt-get update && \
     apt-get install -y build-essential \
         wget \
+	zip \
         unzip \
         tmux \
         python python-pip \
         git \
         netcat
 
-RUN pip install watchdog jinja2
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
